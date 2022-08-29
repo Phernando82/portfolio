@@ -1,11 +1,11 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 
 <head>
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-  <title>Portfolio Details</title>
+  <title>Detalhes do Portfólio</title>
   <meta content="" name="description">
   <meta content="" name="keywords">
 
@@ -46,7 +46,7 @@
 
       <div class="profile">
         <img src="assets/img/profile-img.png" alt="" class="img-fluid rounded-circle">
-        <h1 class="text-light"><a href="index.html">Fernando Valverde</a></h1>
+        <h1 class="text-light"><a href="index-pt.html">Fernando Valverde</a></h1>
         <div class="social-links mt-3 text-center">
           <!--<a href="#" class="twitter"><i class="bx bxl-twitter"></i></a>-->
           <!--<a href="#" class="facebook"><i class="bx bxl-facebook"></i></a>-->
@@ -60,12 +60,12 @@
 
       <nav id="navbar" class="nav-menu navbar">
         <ul>
-          <li><a href="index.html#hero" class="nav-link scrollto active"><i class="bx bx-home"></i> <span>Home</span></a></li>
-          <li><a href="index.html#about" class="nav-link scrollto"><i class="bx bx-user"></i> <span>About</span></a></li>
-          <li><a href="index.html#resume" class="nav-link scrollto"><i class="bx bx-file-blank"></i> <span>Resume</span></a></li>
-          <li><a href="index.html#portfolio" class="nav-link scrollto"><i class="bx bx-book-content"></i> <span>Portfolio</span></a></li>
-          <li><a href="index.html#services" class="nav-link scrollto"><i class="bx bx-server"></i> <span>Services</span></a></li>
-          <li><a href="index.html#contact" class="nav-link scrollto"><i class="bx bx-envelope"></i> <span>Contact</span></a></li>
+          <li><a href="index-pt.html#hero" class="nav-link scrollto active"><i class="bx bx-home"></i> <span>Home</span></a></li>
+          <li><a href="index-pt.html#about" class="nav-link scrollto"><i class="bx bx-user"></i> <span>Sobre</span></a></li>
+          <li><a href="index-pt.html#resume" class="nav-link scrollto"><i class="bx bx-file-blank"></i> <span>Resumo</span></a></li>
+          <li><a href="index-pt.html#portfolio" class="nav-link scrollto"><i class="bx bx-book-content"></i> <span>Portfólio</span></a></li>
+          <li><a href="index-pt.html#services" class="nav-link scrollto"><i class="bx bx-server"></i> <span>Serviços</span></a></li>
+          <li><a href="index-pt.html#contact" class="nav-link scrollto"><i class="bx bx-envelope"></i> <span>Contato</span></a></li>
         </ul>
       </nav><!-- .nav-menu -->
     </div>
@@ -78,10 +78,10 @@
       <div class="container">
 
         <div class="d-flex justify-content-between align-items-center">
-          <h2>Portfolio Details</h2>
+          <h2>Detalhes do Portfólio</h2>
           <ol>
-            <li><a href="index.html">Home</a></li>
-            <li>Portfolio Details</li>
+            <li><a href="index-pt.html">Home</a></li>
+            <li>Detalhes do Portfólio</li>
           </ol>
         </div>
 
@@ -99,15 +99,15 @@
               <div class="swiper-wrapper align-items-center">
 
                 <div class="swiper-slide">
-                  <img src="assets/img/portfolio/olx_tela_1.png" alt="">
+                  <img src="assets/img/portfolio/tela_generator_1.png" alt="">
                 </div>
 
                 <div class="swiper-slide">
-                  <img src="assets/img/portfolio/olx_tela_2.png" alt="">
+                  <img src="assets/img/portfolio/tela_generator_2.png" alt="">
                 </div>
 
                 <div class="swiper-slide">
-                  <img src="assets/img/portfolio/olx_tela_3.png" alt="">
+                  <img src="assets/img/portfolio/tela_generator_3.png" alt="">
                 </div>
 
               </div>
@@ -117,21 +117,26 @@
 
           <div class="col-lg-4">
             <div class="portfolio-info">
-              <h3>Project information</h3>
+              <h3>Informações do projeto</h3>
               <ul>
-                <li><strong>Category</strong>: Web Scraping</li>
-                <li><strong>Project's goal</strong>: Fetch price data on OLX</li>
-                <li><strong>Python Libraries</strong>: Selenium</li>
-                <li><strong>Project URL</strong>: <a href="https://github.com/Phernando82/web_scraping_olx" target="_blank">Web Scraping OLX</a></li>
+                <li><strong>Categoria</strong>: Python Console</li>
+                <li><strong>Objetivo</strong>: Gerar de dados para testes</li>
+                <li><strong>Python Libraries</strong>: shapely, geopy, numpy, pandas, cx_Freeze</li>
+                <li><strong>Link Github</strong>: <a href="https://github.com/Phernando82/gerador_dados" target="_blank">gerador_dados</a></li>
               </ul>
             </div>
             <div class="portfolio-description">
-              <h2>Web Scraping OLX</h2>
+              <h2>Gerador de dados para testes</h2>
               <p>
-                This program is intended to search for product prices on OLX and save the data in a .csv
-                 file. In the case of the example, a search was made for the prices of the Super Ness 
-                 console, where the program saved the data of 385 ads that were in 10 pages, recording
-                  description, price and ad link.
+                Este programa tem como objetivo gerar: nome, e-mail, CPF, cidade, estado, telefone e Código postal. 
+                Para gerar o nome, pandas foi usado para buscar uma amostra aleatória em um arquivo .csd com vários nomes. Com esse
+                 nome é criado um email personalizado e válido, utilizando a função random com strings, que gera caracteres e que são somados ao nome.
+                 O CPF é criado através de uma função com um algoritmo matemático que a valida. Para gerar cidade, estado e CEP, primeiro, com a função
+                 random são geradas duas coordenadas (latitude e longitude), então através da biblioteca shapely e a criação de
+                 um polígono no mapa do Brasil, uma função verifica se esta coordenada está no Brasil, uma vez validada, através do geopy
+                 biblioteca Nominatim, são coletados os dados Rua, Bairro, Cidade e Estado desta coordenada. O telefone é gerado com uma função aleatória,
+                 seguindo o padrão brasileiro e o código DDD é gerado de acordo com o estado encontrado. Os dados são visualizados
+                  e podem ser salvos em um arquivo .txt com data e hora e que foram gerados.
               </p>
             </div>
           </div>

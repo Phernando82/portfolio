@@ -5,7 +5,7 @@
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-  <title>Portfolio Details</title>
+  <title>Detalhes do Portfólio</title>
   <meta content="" name="description">
   <meta content="" name="keywords">
 
@@ -46,7 +46,7 @@
 
       <div class="profile">
         <img src="assets/img/profile-img.png" alt="" class="img-fluid rounded-circle">
-        <h1 class="text-light"><a href="index.html">Fernando Valverde</a></h1>
+        <h1 class="text-light"><a href="index-pt.html">Fernando Valverde</a></h1>
         <div class="social-links mt-3 text-center">
           <!--<a href="#" class="twitter"><i class="bx bxl-twitter"></i></a>-->
           <!--<a href="#" class="facebook"><i class="bx bxl-facebook"></i></a>-->
@@ -60,12 +60,12 @@
 
       <nav id="navbar" class="nav-menu navbar">
         <ul>
-          <li><a href="index.html#hero" class="nav-link scrollto active"><i class="bx bx-home"></i> <span>Home</span></a></li>
-          <li><a href="index.html#about" class="nav-link scrollto"><i class="bx bx-user"></i> <span>About</span></a></li>
-          <li><a href="index.html#resume" class="nav-link scrollto"><i class="bx bx-file-blank"></i> <span>Resume</span></a></li>
-          <li><a href="index.html#portfolio" class="nav-link scrollto"><i class="bx bx-book-content"></i> <span>Portfolio</span></a></li>
-          <li><a href="index.html#services" class="nav-link scrollto"><i class="bx bx-server"></i> <span>Services</span></a></li>
-          <li><a href="index.html#contact" class="nav-link scrollto"><i class="bx bx-envelope"></i> <span>Contact</span></a></li>
+          <li><a href="index-pt.html#hero" class="nav-link scrollto active"><i class="bx bx-home"></i> <span>Home</span></a></li>
+          <li><a href="index-pt.html#about" class="nav-link scrollto"><i class="bx bx-user"></i> <span>Sobre</span></a></li>
+          <li><a href="index-pt.html#resume" class="nav-link scrollto"><i class="bx bx-file-blank"></i> <span>Resumo</span></a></li>
+          <li><a href="index-pt.html#portfolio" class="nav-link scrollto"><i class="bx bx-book-content"></i> <span>Portfólio</span></a></li>
+          <li><a href="index-pt.html#services" class="nav-link scrollto"><i class="bx bx-server"></i> <span>Serviços</span></a></li>
+          <li><a href="index-pt.html#contact" class="nav-link scrollto"><i class="bx bx-envelope"></i> <span>Contato</span></a></li>
         </ul>
       </nav><!-- .nav-menu -->
     </div>
@@ -78,10 +78,10 @@
       <div class="container">
 
         <div class="d-flex justify-content-between align-items-center">
-          <h2>Portfolio Details</h2>
+          <h2>Detalhes do Portfólio</h2>
           <ol>
-            <li><a href="index.html">Home</a></li>
-            <li>Portfolio Details</li>
+            <li><a href="index-pt.html">Home</a></li>
+            <li>Detalhes do Portfólio</li>
           </ol>
         </div>
 
@@ -99,15 +99,15 @@
               <div class="swiper-wrapper align-items-center">
 
                 <div class="swiper-slide">
-                  <img src="assets/img/portfolio/olx_tela_1.png" alt="">
+                  <img src="assets/img/portfolio/euro1.png" alt="">
                 </div>
 
                 <div class="swiper-slide">
-                  <img src="assets/img/portfolio/olx_tela_2.png" alt="">
+                  <img src="assets/img/portfolio/euro2.png" alt="">
                 </div>
 
                 <div class="swiper-slide">
-                  <img src="assets/img/portfolio/olx_tela_3.png" alt="">
+                  <img src="assets/img/portfolio/euro3.png" alt="">
                 </div>
 
               </div>
@@ -117,21 +117,20 @@
 
           <div class="col-lg-4">
             <div class="portfolio-info">
-              <h3>Project information</h3>
+              <h3>Informações do projeto</h3>
               <ul>
-                <li><strong>Category</strong>: Web Scraping</li>
-                <li><strong>Project's goal</strong>: Fetch price data on OLX</li>
-                <li><strong>Python Libraries</strong>: Selenium</li>
-                <li><strong>Project URL</strong>: <a href="https://github.com/Phernando82/web_scraping_olx" target="_blank">Web Scraping OLX</a></li>
+                <li><strong>Categoria</strong>: Web Scraping</li>
+                <li><strong>Objetivo</strong>: Buscar a cotação do Euro e reportar por email</li>
+                <li><strong>Python Libraries</strong>: Scrapy, Schedule, SMTPLib</li>
+                <li><strong>Link Github</strong>: <a href="https://github.com/Phernando82/monitora_euro" target="_blank">Monitorar Euro</a></li>
               </ul>
             </div>
             <div class="portfolio-description">
-              <h2>Web Scraping OLX</h2>
+              <h2>Web Scraping Cotação do Euro</h2>
               <p>
-                This program is intended to search for product prices on OLX and save the data in a .csv
-                 file. In the case of the example, a search was made for the prices of the Super Ness 
-                 console, where the program saved the data of 385 ads that were in 10 pages, recording
-                  description, price and ad link.
+                Este projeto visa pesquisar a cotação do Euro frente ao Real (moeda brasileira)
+                da página: https://www.investing.com/, verifica se o valor do Euro é superior a 5,0441 e
+                 se isso ocorrer, envia um e-mail alertando dessa alta.
               </p>
             </div>
           </div>
