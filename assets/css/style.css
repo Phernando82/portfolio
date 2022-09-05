@@ -215,8 +215,8 @@ h1, h2, h3, h4, h5, h6 {
   position: relative;
   z-index: 2;
   min-width: 300px;
-  margin-right: 400px;
-  margin-top: 100px;
+  margin-left: 100px;
+  margin-bottom: 400px;
 }
 #hero h1 {
   margin: 0 0 10px 0;
