@@ -697,7 +697,7 @@
                   setTimeout(() => {
                     successMessage.style.display = 'none';
                   }, 10000); // 10000ms = 10 seconds
-                } else {
+                } else if (response.status !== 429) {
                   const result = await response.text(); // Handle non-JSON response
                   errorMessage.style.display = 'block';
                   errorMessage.innerHTML = result || 'Ocorreu um erro ao enviar sua mensagem.';
@@ -711,6 +711,7 @@
               }
             });
           </script>
+          
           
           
           
