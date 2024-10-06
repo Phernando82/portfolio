@@ -664,6 +664,42 @@
 
       </div>
     </section><!-- End Contact Section to set the form: https://app.getform.io/-->
+    <script>
+      const form = document.querySelector('.php-email-form');
+      
+      form.addEventListener('submit', async function(event) {
+        event.preventDefault();
+        
+        const formData = new FormData(form);
+    
+        try {
+          const response = await fetch(form.action, {
+            method: form.method,
+            body: formData,
+            headers: {
+              'Accept': 'application/json'
+            }
+          });
+    
+          const result = await response.json();
+    
+          if (response.ok) {
+            document.querySelector('.sent-message').style.display = 'block';
+            document.querySelector('.error-message').style.display = 'none';
+            document.querySelector('.sent-message').innerHTML = result.error || 'Sua mensagem foi enviada com sucesso!.';
+            form.reset(); // Clear the form after success
+          } else {
+            document.querySelector('.error-message').style.display = 'block';
+            document.querySelector('.sent-message').style.display = 'none';
+            document.querySelector('.error-message').innerHTML = result.error || 'There was an error sending your message.';
+          }
+        } catch (error) {
+          document.querySelector('.error-message').style.display = 'block';
+          document.querySelector('.sent-message').style.display = 'none';
+          document.querySelector('.error-message').innerHTML = 'There was an error sending your message.';
+        }
+      });
+    </script>    
 
   </main><!-- End #main -->
 
